@@ -1,0 +1,210 @@
+<<<<<<< HEAD
+<?php
+$insert = false;
+if(isset($_POST['name'])){
+
+$server = "localhost"; 
+$username = "root";
+$password = "";
+$db = "animate";
+
+$con = mysqli_connect($server , $username ,$password ,$db);
+
+if(!$con){
+    die("connect to the database is failed".mysqli_connect_error());
+}
+//echo "connected successfully";
+
+$name = $_POST["name"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+$sql = "INSERT into `animate`.`form`(`name`,`email`,`password`) VALUES ('$name' ,'$email' , '$password')";
+
+if($con-> query($sql)==TRUE){
+   echo "<div class='alert alert-primary' role='alert'>Inserted Successfully!</div>";
+    //echo "inserted successfully";
+    //$insert = true;
+} else {
+    echo "error : $sql <br> $con->error";
+}
+$con->close();
+};
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Page || Sahib-Programing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+             <div class="container" id="container">
+                <div class="form-container sign-up">
+                    <form action="main.php" method = "POST">
+                        <h1>Create Account</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>
+                            or use your email for registration
+                        </span>
+                        <input type="text" name="name" id="name" placeholder="name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in">
+                    <form action="#">
+                        <h1>Sign In</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>
+                            or use your email password
+                        </span>
+                        <input type="email" name="email" id="name" placeholder="Email">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <a href="#" class="forget">Forget your Password</a>
+                        <button>Sign In</button>
+                    </form>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button class="hidden" id="login"> Sign In</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello ,Friends</h1>
+                            <p>Registered with your personal details to use all of site features</p>
+                            <button class="hidden" id="register"> Sign up</button>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+    <script src="script.js"></script>
+</body>
+=======
+<?php
+$insert = false;
+if(isset($_POST['name'])){
+
+$server = "localhost"; 
+$username = "root";
+$password = "";
+$db = "animate";
+
+$con = mysqli_connect($server , $username ,$password ,$db);
+
+if(!$con){
+    die("connect to the database is failed".mysqli_connect_error());
+}
+//echo "connected successfully";
+
+$name = $_POST["name"];
+$email = $_POST["email"];
+$password = $_POST["password"];
+
+$sql = "INSERT into `animate`.`form`(`name`,`email`,`password`) VALUES ('$name' ,'$email' , '$password')";
+
+if($con-> query($sql)==TRUE){
+   echo "<div class='alert alert-primary' role='alert'>Inserted Successfully!</div>";
+    //echo "inserted successfully";
+    //$insert = true;
+} else {
+    echo "error : $sql <br> $con->error";
+}
+$con->close();
+};
+
+
+?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login Page || Sahib-Programing</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+</head>
+<body>
+             <div class="container" id="container">
+                <div class="form-container sign-up">
+                    <form action="main.php" method = "POST">
+                        <h1>Create Account</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>
+                            or use your email for registration
+                        </span>
+                        <input type="text" name="name" id="name" placeholder="name">
+                        <input type="email" name="email" id="email" placeholder="Email">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <button>Sign Up</button>
+                    </form>
+                </div>
+                <div class="form-container sign-in">
+                    <form action="#">
+                        <h1>Sign In</h1>
+                        <div class="social-icons">
+                            <a href="#" class="icon"><i class="fa-brands fa-google-plus-g"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-github"></i></a>
+                            <a href="#" class="icon"><i class="fa-brands fa-linkedin-in"></i></a>
+                        </div>
+                        <span>
+                            or use your email password
+                        </span>
+                        <input type="email" name="email" id="name" placeholder="Email">
+                        <input type="password" name="password" id="password" placeholder="Password">
+                        <a href="#" class="forget">Forget your Password</a>
+                        <button>Sign In</button>
+                    </form>
+                </div>
+                <div class="toggle-container">
+                    <div class="toggle">
+                        <div class="toggle-panel toggle-left">
+                            <h1>Welcome Back!</h1>
+                            <p>Enter your personal details to use all of site features</p>
+                            <button class="hidden" id="login"> Sign In</button>
+                        </div>
+                        <div class="toggle-panel toggle-right">
+                            <h1>Hello ,Friends</h1>
+                            <p>Registered with your personal details to use all of site features</p>
+                            <button class="hidden" id="register"> Sign up</button>
+                        </div>
+                    </div>
+                </div>
+
+             </div>
+    <script src="script.js"></script>
+</body>
+>>>>>>> 080b9272488e560be72502d70a5740f51bac345e
+</html>
